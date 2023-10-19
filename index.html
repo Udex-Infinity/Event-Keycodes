@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keycode Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0074d9;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border: 2px solid #0074d9;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            border: 2px solid #0074d9;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #keycode-display {
+            font-size: 36px;
+            color: #0074d9;
+            padding: 20px;
+            border: 0.5px solid #333; /* Smaller border size */
+            border-radius: 10px;
+            background-color: #f0f0f0;
+        }
+
+        #footer {
+            background-color: #0074d9;
+            color: #ffffff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>UnnatiZone WebDev Project</h1>
+        <h2>Keycode Display</h2>
+        <div id="keycode-display">Press any key to see its keycode</div>
+    </div>
+    <div id="footer">
+        Project by: Ugyen Dorji
+    </div>
+    <script>
+        document.addEventListener('keydown', function (event) {
+            const keycodeDisplay = document.getElementById('keycode-display');
+            keycodeDisplay.textContent = `Keycode: ${event.keyCode}`;
+        });
+    </script>
+</body>
+</html>
